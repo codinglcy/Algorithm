@@ -1,0 +1,9 @@
+def solution(array, commands):
+    answer = []
+    middleResult = []
+    
+    for cmd in commands:
+        middleResult = array[cmd[0]-1:cmd[1]]
+        middleResult.sort()
+        answer.append(middleResult[cmd[2]-1])
+    return answer
