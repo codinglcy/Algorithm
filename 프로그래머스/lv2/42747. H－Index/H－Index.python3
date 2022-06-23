@@ -1,0 +1,11 @@
+def solution(citations):
+    sortedCit = sorted(citations)
+    
+    if set(citations) == {0}:
+        return 0
+    else:
+        for i in range(len(sortedCit)):
+            slicesort = sortedCit[i:]
+            for j in range(max(citations)):
+                if len(slicesort) == j and j <= slicesort[0]:
+                    return j
