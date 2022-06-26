@@ -1,0 +1,9 @@
+def solution(numbers):
+    answer = ''
+    numStr = [str(i) for i in numbers]
+    
+    numStr.sort(key=lambda num:num*3, reverse=True)
+    
+    answer = str(int("".join(numStr)))
+
+    return answer
